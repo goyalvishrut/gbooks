@@ -1,0 +1,3 @@
+#GBOOKS
+
+App developed on flask to use google api and fetch the books result and show in custom hmtl simple page.
