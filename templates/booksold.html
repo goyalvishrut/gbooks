@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of Books</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        padding: 10px;
+        margin: 10px 0;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      li:hover {
+        background-color: #e6e6e6;
+      }
+      .book-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .book-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .book-publisher {
+        font-size: 16px;
+        font-style: italic;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .book-description {
+        font-size: 14px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List of Books</h1>
+
+    <ul>
+      {% for book in books %}
+
+      <li>
+        <i class="fa fa-book book-icon"></i>
+        <div class="book-title">{{book.volumeInfo.title}}</div>
+        <div class="book-publisher">{{book.volumeInfo.publisher}}</div>
+        <div class="book-description">{{book.volumeInfo.description}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
